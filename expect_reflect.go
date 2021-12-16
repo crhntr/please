@@ -1,4 +1,4 @@
-//go:build !go1.18
+//go:build !typeparams
 
 package please
 
@@ -18,7 +18,7 @@ func ExpectNilError(t testingT, err error) bool {
 
 func ExpectEqual(t testingT, got, exp interface{}) bool {
 	t.Helper()
-	if reflect.DeepEqual(got, exp) {
+	if !reflect.DeepEqual(got, exp) {
 		t.Errorf("\nexpectation failed, got:\n\t%v\nbut expected:\n\t%v", got, exp)
 		return false
 	}
