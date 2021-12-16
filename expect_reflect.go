@@ -4,8 +4,6 @@ package please
 
 import "reflect"
 
-type any = interface{}
-
 func ExpectNilError(t testingT, err error) bool {
 	t.Helper()
 	if err != nil {

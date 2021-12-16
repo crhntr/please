@@ -1,3 +1,3 @@
 module github.com/crhntr/please
 
-go 1.17
+go 1.18

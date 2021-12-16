@@ -2,6 +2,6 @@ package please
 
 type testingT interface {
 	Helper()
-	Errorf(string, ...any)
-	Logf(string, ...any)
+	Errorf(arg1 string, arg2 ...interface{})
+	Logf(arg1 string, arg2 ...interface{})
 }
