@@ -2,16 +2,6 @@
 
 package please
 
-func ExpectNilError(t testingT, err error) bool {
-	t.Helper()
-	if err != nil {
-		t.Errorf("expectation failed, got an error: %s", err)
-		return false
-	}
-	t.Logf("expectation met, error is nil")
-	return true
-}
-
 func ExpectEqual[T comparable](t testingT, got, exp T) bool {
 	t.Helper()
 	if got != exp {

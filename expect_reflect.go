@@ -4,16 +4,6 @@ package please
 
 import "reflect"
 
-func ExpectNilError(t testingT, err error) bool {
-	t.Helper()
-	if err != nil {
-		t.Errorf("expectation failed, got an error: %s", err)
-		return false
-	}
-	t.Logf("expectation met, error is nil")
-	return true
-}
-
 func ExpectEqual(t testingT, got, exp interface{}) bool {
 	t.Helper()
 
